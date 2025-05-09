@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        
+
+.container{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.7fr 1.5fr 1.5fr 0.9fr 1.3fr 1.3fr 1.3fr 0.3fr;
+    grid-template-areas: 
+    "navbar navbar"
+    "about about"
+    "education education"
+    "project project"
+    "project project"
+    "experience experience"
+    "blog blog"
+    "blog blog"
+    "blog blog"
+    "contact contact"    
+    ;
+    height: 500vh;
+    background-color: aliceblue;
+    }
+
+
+/* Other body styles and text styling remain the same */
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin: 0px;
+    line-height: 1cm;
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+.nav-item {
+    padding-right: 20px;
+    text-align: center;
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color:#FFFFFF;
+    color: #000;
+    padding-left: 20px;
+    font-size: 30px;
+}
+.nav-myname {
+    font-size: 30px;
+}
+
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* .navbar {
+    grid-area: navbar;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding: 40px;
+}
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav-item {
+    padding-left: 39px;
+    font-size: 20px;
+}
+.nav-myname {
+    margin-right: 630px;
+    font-size: 30px;
+} */
+
+/* About Me */
+.about {
+    grid-area: about;
+    background-color: #1C1C1C;
+    color: #DCDCDC;
+    padding: 60px 100px;
+    height: 550px;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 2.3cm;
+    margin-bottom: -5px;
+    margin-top: 10px;
+}
+
+.about-me-section {
+    display: grid;
+    width: 600px;
+    float: left;
+    padding-top: 30px;
+    text-align: justify;
+}
+
+.my-profile {
+    display: grid;
+    width: 600px;
+    float: right;
+    padding-top: 10px;
+    border-radius: 1cm;
+}
+
+/* Education */
+.education {
+    grid-area: education;
+    padding: 100px;
+    height: 350px;
+    background-color: #DCDCDC;
+}
+
+.hr-dot {
+    font-size: 100px;
+    float: left;
+    margin-top: -54px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+}
+
+.bachelors {
+    width: 550px;
+    float: left;
+}
+
+.masters {
+    width: 600px;
+    float: right;
+}
+
+/* Project */
+.project {
+    grid-area: project;
+    background-color: #1C1C1C;
+    color: #DCDCDC;
+    padding: 100px;
+    height: 1600px;
+}
+
+.project-row1 {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.project-content {
+    background-color: black;
+    padding: 50px;
+    margin-top: -15px;
+    height: 200px;
+    width: 510px;
+}
+
+.project-1, .project-2, .project-3, .project-4 {
+    float: left;
+}
+.project-2{
+    padding-left: 95px;
+}
+.project-4{
+    padding-left: 95px;
+    padding-top: 30px;
+}
+.project-3{
+    padding-top: 30px;
+}
+.project-img1, .project-img2, .project-img3, .project-img4 {
+    width: 610px;
+    height: 406px;
+}
+
+/* Experience */
+.experience {
+    grid-area: experience;
+    height: 550px;
+    padding-top: 100px;
+    background-color: #DCDCDC;
+}
+
+.vr-dot {
+    font-size: 100px;
+    float: right;
+    margin-top: -70px;
+    margin-bottom: 0px;
+    margin-right: -116px;
+}
+
+.intern-date {
+    border-right: 2px solid black;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0px;
+    margin-top: 43px;
+    width: 550px;
+    height: 200px;
+    float: left;
+}
+
+.h3-intern-date {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.work-date {
+    padding-top: 60px;
+}
+
+.intern-title {
+    padding-right: 100px;
+    padding-left: 70px;
+    margin-top: 43px;
+    width: 570px;
+    float: right;
+}
+
+.h3-intern-name {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.work-title {
+    padding-top: 20px;
+}
+
+/* Blogs */
+.blog {
+    grid-area: blog;
+    height: 2000px;
+    padding: 100px 0px;
+    color: #DCDCDC;
+    background-color: #1C1C1C;
+}
+
+.blog-1, .blog-2, .blog-3 {
+    background-color: #DCDCDC;
+    height: 500px;
+    padding-top: 50px;
+    border-radius: 1cm;
+    margin: 100px 100px;
+}
+
+.blog-img1, .blog-img2, .blog-img3 {
+    height: 550px;
+    width: 650px;
+    float: left;
+    margin-top: -50px;
+    border-radius: 1cm 0cm 0cm 1cm;
+}
+
+.blog-content-div1, .blog-content-div2, .blog-content-div3 {
+    width: 650px;
+    height: 500px;
+    margin: -50px 10px 0px 10px;
+    background-color: #DCDCDC;
+    border-radius: 1cm;
+    color: #1C1C1C;
+    float: right;
+}
+
+.blog-content1, .blog-content2, .blog-content3 {
+    padding: 60px 100px 0px 100px;
+    text-align: justify;
+}
+
+/* Contact */
+.contact {
+    grid-area: contact;
+    background-color: black;
+    color: #DCDCDC;
+    padding: 30px 0px 30px 0px;
+    height: 160px;
+}
+
+.contact-div {
+    padding: 0px 0px 0px 600px;
+    height: 70px;
+}
+
+.list {
+    padding: 16px;
+    list-style: none;
+    float: left;
+}
+
+.facebook-icon {
+    width: 40px;
+    border-radius: 1.5cqb;
+}
+
+.github-icon {
+    width: 55px;
+    margin: -8px;
+}
+
+.linkedin-icon {
+    width: 65px;
+    margin: -11px;
+}
+
+.copyright {
+    padding: 0px 0px 0px 565px;
+}
+
+/* Mobile Layout */
+
+@media only screen and (max-width: 500px){
+
+    .container{ 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2f 1.4fr 0.8fr 1fr 1fr 1fr 1fr 1.4fr 1.3fr 1.3fr 1.3fr 0.2fr;
+        grid-template-areas: 
+        "navbar"
+        "about"
+        "education"
+        "project"
+        "project"
+        "project"
+        "project"        
+        "experience"
+        "blog"
+        "blog"
+        "blog"
+        "contact"    
+        ;
+        height: 550vh;
+        background-color: aliceblue;
+        }
+
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            padding: 0px;
+            line-height: 1cm;
+        }
+        
+        h2 {
+            margin-top: 0px;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        /* Navbar */
+        .navbar{
+            height: 100px;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 90px;
+            right: -365px;
+            width: 28%;
+            background-color: #1c1c1c79;
+            text-align: left;
+            padding: 10px 0px 0px 0px;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .nav-item {
+            padding: 15px;
+            font-size: 18px;
+        }
+        .nav-item:hover {
+            background-color:#FFFFFF;
+            color: #000;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .menu-icon {
+            display: block;
+        }
+
+        /* .navbar {
+            grid-area: navbar;
+            background-color: #1C1C1C;
+            color: #FFFFFF;
+            padding: 40px;
+        }
+        .navbar a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .nav-item {
+            padding-left: 39px;
+            font-size: 20px;
+        }
+        .nav-myname {
+            margin-right: 630px;
+            font-size: 30px;
+        } */
+        
+        /* About Me */
+        .about {
+            padding: 50px 0px 100px 140px;
+            grid-area: about;
+            background-color: #1C1C1C;
+            color: #DCDCDC;
+            height: 1050px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            line-height: 2.3cm;
+            margin-bottom: -5px;
+            margin-top: 10px;
+        }
+        
+        .about-me-section {
+            display: grid;
+            width: 600px;
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .my-profile {
+            display: grid;
+            width: 600px;
+            padding-right: 150px;
+            padding-top: 50px;
+            border-radius: 0rem;
+        }
+        
+        /* Education */
+        .education {
+            
+            grid-area: education;
+            padding: 100px;
+            height: 630px;
+            background-color: #DCDCDC;
+        }
+        
+        .hr-dot {
+            font-size: 100px;
+            float: left;
+            margin-top: -54px;
+            margin-bottom: 0px;
+            margin-left: -10px;
+        }
+        
+        .bachelors {
+            padding: 0px 0px 0px 50px;
+            width: 600px;
+        }
+        
+        .masters {
+            width: 600px;
+            padding: 0px 40px 0px 0px;
+        }
+        
+        /* Project */
+        .project {
+            grid-area: project;
+            background-color: #1C1C1C;
+            color: #DCDCDC;
+            padding: 100px 0px 100px 0px;
+            height: 3150px;
+        }
+        
+        .project-row1 {
+            padding: 100px 0px 100px 140px;
+        }
+
+        .project-row2 {
+            padding: 100px 0px 100px 140px;
+        }
+        
+        .project-content {
+            background-color: black;
+            padding: 50px;
+            margin-top: -15px;
+            height: 200px;
+            width: 510px;
+        }
+        
+        .project-2{
+            margin-left: -95px;
+            padding-top: 30px;
+        }
+        .project-4{
+            margin-left: -95px;
+            padding-top: 30px;
+        }
+        .project-3{
+            padding-top: 30px;
+        }
+        .project-img1, .project-img2, .project-img3, .project-img4 {
+            width: 610px;
+            height: 406px;
+        }
+        
+        /* Experience */
+        .experience {
+            grid-area: experience;
+            height: 950px;
+            padding-top: 100px;
+            background-color: #DCDCDC;
+        }
+        
+        .vr-dot {
+            font-size: 100px;
+            float: right;
+            margin-top: -70px;
+            margin-bottom: 0px;
+            margin-right: -116px;
+            color: #DCDCDC;
+        }
+        
+        .intern-date {
+            width: 600px;
+            border-right: 2px solid #DCDCDC;
+            padding-left: 140px;
+            padding-right: 100px;
+            padding-top: 0px;
+            margin-top: 43px;
+            height: 200px;
+   
+        }
+        
+        .h3-intern-date {
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+        
+        .work-date {
+            border-top: 2px solid;
+            margin-top: 250px;
+            width: 600px;
+        }
+        
+        .intern-title {
+            
+            padding-right: 160px;
+            margin-top: -50px;
+            width: 570px;
+            height: 200px;
+            
+        }
+        
+        .h3-intern-name {
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+        
+        .work-title {
+            padding-top: 255px;
+        }
+        
+        /* Blogs */
+        .blog {
+            grid-area: blog;
+            height: 3350px;
+            padding: 100px 0px;
+            color: #DCDCDC;
+            background-color: #1C1C1C;
+        }
+        
+        .blog-1, .blog-2, .blog-3 {
+            background-color: #DCDCDC;
+            height: 950px;
+            width: 600px;
+            padding-top: 50px;
+            margin-left: 145px;
+            border-radius: 1cm;
+        }
+        
+        .blog-img1, .blog-img2, .blog-img3 {
+            height: 500px;
+            width: 600px;
+            margin-top: -50px;
+            border-radius: 1cm;
+        }
+        
+        .blog-content-div1, .blog-content-div2, .blog-content-div3 {
+            width: 590px;
+            height: 500px;
+            margin: 0px 10px 0px 10px;
+            background-color: #DCDCDC;
+            border-radius: 1cm;
+            color: #1C1C1C;
+        }
+        
+        .blog-content1, .blog-content2, .blog-content3 {
+            padding: 35px 80px 50px 80px;
+            text-align: center;
+    
+        }
+        
+        /* Contact */
+        .contact {
+            grid-area: contact;
+            background-color: black;
+            color: #DCDCDC;
+            padding: 30px 0px 30px 0px;
+            height: 160px;
+        }
+        
+        .contact-div {
+            padding: 0px 0px 0px 300px;
+            height: 70px;
+        }
+        
+        .list {
+            padding: 16px;
+            list-style: none;
+        }
+        
+        .facebook-icon {
+            width: 40px;
+            border-radius: 1.5cqb;
+        }
+        
+        .github-icon {
+            width: 55px;
+            margin: -8px;
+        }
+        
+        .linkedin-icon {
+            width: 65px;
+            margin: -11px;
+        }
+        
+        .copyright {
+            padding: 0px 0px 0px 0px;
+        }
+    }
+     </style>
+</head>
+<body>
+    <div class="container">
+
+        <!--Navbar-->
+        <!-- Navbar -->
+        <div id="navbar" class="navbar">
+            <a href="#" class="nav-myname">Keerthi S P</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#project" class="nav-item">Project</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#blog" class="nav-item">Blog</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">☰</div>
+        </div>
+
+
+        <!-- <div id="navbar" class="navbar">
+            <a href="#" class="nav-myname">Keerthi S P</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#education" class="nav-item">Education</a>
+            <a href="#project" class="nav-item">Project</a>
+            <a href="#experience" class="nav-item">Experience</a>
+            <a href="#blog" class="nav-item">Blog</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </div> -->
+
+        <!--About-->
+        
+        <div id="about" class="about">
+            <div class="about-me-section">
+                <h1>I am Keerthi Selvi Padmanabhan</h1>
+                <h1>A Web Developer.</h1>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Curae massa cras etiam litora leo auctor elit. Montes cras sapien fringilla aliquet conubia dictum primis. Condimentum curae egestas nec egestas. 
+                </p>
+            </div>
+            <div class="my-profile-section">
+                <img class="my-profile" src="./images/My_Profile.jpg" alt="My profile picture">
+            </div>
+        </div>
+        
+        <!--Education-->
+        <div id="education" class="education">
+            <h2>EDUCATION</h2>
+            <div class="bachelors">
+                <h3>Bachelors of Technology</h3>
+                <p class="hr-dot">.</p>
+                <hr>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p>
+            </div>
+            <div class="masters">
+                <h3>Masters of Science</h3>
+                <p class="hr-dot">.</p>
+                <hr>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p>
+            </div>
+        </div>
+
+        <!--Project-->
+        <div id="project" class="project">
+            <h2>PROJECT</h2>
+            <div class="project-row1">
+                <div class="project-1">
+                    <img class="project-img1" src="./images/Project_1.jpg" alt="">
+                    <div class="project-content-div">
+                        <p class="project-content">Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p> 
+                    </div>
+                </div> 
+                <div class="project-2">
+                    <img class="project-img2" src="./images/Project_5.jpg" alt="">
+                    <div class="project-content-div">
+                        <p class="project-content">Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p> 
+                    </div>
+                </div> 
+            </div>
+            <div class="project-row2">
+                <div class="project-3">
+                    <img class="project-img3" src="./images/Project_5.jpg" alt="">
+                    <div class="project-content-div">
+                        <p class="project-content">Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p> 
+                    </div> 
+                </div> 
+                <div class="project-4">
+                    <img class="project-img4" src="./images/Project_1.jpg" alt="">
+                    <div class="project-content-div">
+                        <p class="project-content">Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.</p> 
+                    </div> 
+                </div> 
+            </div>
+        </div>
+
+        <!--Experience-->
+        <div id="experience" class="experience">
+            <h2>EXPERIENCE</h2>
+                <div class="intern-date">
+                    <h3 class="h3-intern-date">2022 January - 2022 May</h3>
+                    <p class="vr-dot">.</p>
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere.</p>
+                    <div class="work-date">
+                        <h3 class="h3-intern-date">2022 June - 2023 February</h3>
+                        <p class="vr-dot">.</p>
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere.</p>    
+                    </div>
+                </div>
+                <div class="intern-title">
+                    <h3 class="h3-intern-name">DXC Technology</h3>
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum.</p>
+                    <div class="work-title">
+                        <h3 class="h3-intern-name">ABC Technology</h3>
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum.</p>    
+                    </div>
+                </div>
+        </div>
+
+        <!--Blog-->
+        <div id="blog" class="blog">
+            <h2>BLOGS</h2>
+            <div class="blog-1">
+                <div class="blog-img-div1">
+                    <img class="blog-img1" src="./images/Blog_2.jpg" alt="My profile picture">
+                </div>   
+                <div class="blog-content-div1">
+                    <div class="blog-content1">
+                        <h3>Blog1</h3>
+                        <p>
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.                    
+                        </p> 
+                    </div>
+                </div> 
+            </div>
+            <div class="blog-2">
+                <div class="blog-img-div2">
+                    <img class="blog-img2" src="./images/Blog_3.jpg" alt="My profile picture">
+                </div>   
+                <div class="blog-content-div2">
+                    <div class="blog-content2">
+                        <h3>Blog2</h3>
+                        <p>
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.                    
+                        </p> 
+                    </div>
+                </div> 
+            </div>
+            <div class="blog-3">
+                <div class="blog-img-div3">
+                    <img class="blog-img3" src="./images/Blog_4.jpg" alt="My profile picture">
+                </div>   
+                <div class="blog-content-div3">
+                    <div class="blog-content3">
+                        <h3>Blog3</h3>
+                        <p>
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Justo lobortis massa habitant purus pretium posuere. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis. Pharetra eu congue fringilla, consectetur consectetur interdum. Sodales vel risus dui mauris malesuada urna cras ultrices mollis.                    
+                        </p> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <!--Contact-->
+        <div id="contact" class="contact">
+            <div class="contact-div">
+                <ul>
+                    <li class="list">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img class="facebook-icon" src="./images/facebook.jpg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="https://en.wikipedia.org/wiki/GitHub" target="_blank">
+                            <img class="github-icon" src="./images/github.png" alt="Github">
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="https://en.wikipedia.org/wiki/LinkedIn" target="_blank">
+                            <img class="linkedin-icon" src="./images/linkedin.webp" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright">Copyright 2025 Keerthi Selvi Padmanabhan</p>            
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+}
+
+     </script>
+</body>
+</html>
