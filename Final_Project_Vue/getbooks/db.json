@@ -1,0 +1,54 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Inside AI: The Future of Tech",
+      "channel": "TechWorld",
+      "category": "Technology",
+      "views": 1850000,
+      "uploadDate": "2025-03-01",
+      "likes": 58000,
+      "comments": 4200
+    },
+    {
+      "id": 2,
+      "title": "Top 10 Music Hits of 2025",
+      "channel": "MusicZone",
+      "category": "Music",
+      "views": 2400000,
+      "uploadDate": "2025-03-20",
+      "likes": 91000,
+      "comments": 7300
+    },
+    {
+      "id": 3,
+      "title": "A Day in Tokyo - Travel Vlog",
+      "channel": "WanderVibes",
+      "category": "Vlogs",
+      "views": 760000,
+      "uploadDate": "2025-02-27",
+      "likes": 25000,
+      "comments": 1800
+    },
+    {
+      "id": 4,
+      "title": "Beginner’s Guide to Investing",
+      "channel": "Finance Today",
+      "category": "Education",
+      "views": 980000,
+      "uploadDate": "2025-01-10",
+      "likes": 33000,
+      "comments": 2600
+    },
+    {
+      "id": 5,
+      "title": "React vs Vue in 2025",
+      "channel": "CodeCast",
+      "category": "Tech Reviews",
+      "views": 540000,
+      "uploadDate": "2025-03-28",
+      "likes": 19000,
+      "comments": 1200
+    }
+  ]
+}
